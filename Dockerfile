@@ -1,4 +1,4 @@
-FROM node:20-bullseye
+FROM node:18
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -15,6 +15,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 5678
+EXPOSE 8080
 
 CMD [ "node", "studentserver.js" ]
